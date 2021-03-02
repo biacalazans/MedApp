@@ -1,0 +1,65 @@
+.myTool {
+  border: 0ch;
+  height: 70px;
+  padding: 10px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.containerScroll {
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll {
+    overflow: auto;
+  }
+}
+
+.searchbar {
+  margin-top: -30px;
+  align-self: center;
+}
+
+.text {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text.item1 {
+  font-size: 10px;
+  text-align: center;
+}
+
+.text.item2 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text.item3 {
+  color: gray;
+  font-size: 14px;
+}
+
+.text.item4 {
+  margin-top: -10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text.item5 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fdfdfd;
+}
+
+.poster {
+  background-color: #8cc9d1;
+  border-radius: 8px;
+  padding: 10px;
+  height: 160px;
+}

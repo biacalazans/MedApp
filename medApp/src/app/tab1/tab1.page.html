@@ -1,0 +1,39 @@
+<ion-toolbar class="myTool">
+  <ion-button color="dark" fill="clear" slot="start">
+    <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+  </ion-button>
+  <ion-title class="text item1" color="dark" size="small"
+    >LOCALIZAÇÃO</ion-title
+  >
+  <ion-title class="text item2" size="small">Salvador, Bahia</ion-title>
+  <ion-avatar slot="end">
+    <img
+      src="https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png"
+    />
+  </ion-avatar>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <p class="text item3">Bom dia, Beatriz</p>
+    <p class="text item4">Como está se sentindo hoje?</p>
+  </div>
+  <ion-searchbar
+    placeholder="Pesquise sintomas ou médicos"
+    class="searchbar"
+  ></ion-searchbar>
+
+  <div class="containerScroll">
+    <div class="scroll" scrollLeft="true">
+      <ion-chip color="primary" *ngFor="let sintoma of sintomas">
+        <ion-label>{{sintoma}}</ion-label>
+      </ion-chip>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="poster">
+      <p class="text item5">Cuide da sua saúde mental durante a pandemia</p>
+    </div>
+  </div>
+</ion-content>
