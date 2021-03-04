@@ -1,11 +1,19 @@
 .myTool {
   border: 0ch;
-  height: 70px;
+  height: 80px;
   padding: 10px;
 }
 
 .container {
   padding: 20px;
+}
+
+.expand {
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
 }
 
 .containerScroll {
@@ -57,9 +65,33 @@
   color: #fdfdfd;
 }
 
+.text.item6 {
+  font-size: 12px;
+  color: #31d367;
+  text-align: end;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text.item7 {
+  font-size: 18px;
+}
+
 .poster {
   background-color: #8cc9d1;
   border-radius: 8px;
   padding: 10px;
   height: 160px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  margin-top: -10px;
 }

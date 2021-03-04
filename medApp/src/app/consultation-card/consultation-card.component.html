@@ -1,0 +1,34 @@
+<div class="card">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <ion-avatar>
+          <img [src]="consultationItem.imageUrl" />
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="9">
+        <ion-row>
+          <ion-col>
+            <p class="text item1">{{ consultationItem.doctor }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p class="text item2">{{ consultationItem.area }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <p class="text item3">Data e hora</p>
+  <div class="dateTime">
+    <ion-chip outline color="medium">
+      <ion-icon color="dark" name="calendar"></ion-icon>
+      <ion-label>{{ consultationItem.date }}</ion-label>
+    </ion-chip>
+    <ion-chip outline color="medium">
+      <ion-icon color="dark" name="time"></ion-icon>
+      <ion-label>{{ consultationItem.time }}</ion-label>
+    </ion-chip>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 <ion-toolbar class="myTool">
-  <ion-button color="dark" fill="clear" slot="start">
+  <ion-button color="dark" fill="outline" slot="start">
     <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
   </ion-button>
   <ion-title class="text item1" color="dark" size="small"
@@ -7,9 +7,7 @@
   >
   <ion-title class="text item2" size="small">Salvador, Bahia</ion-title>
   <ion-avatar slot="end">
-    <img
-      src="https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png"
-    />
+    <img src="https://i.stack.imgur.com/l60Hf.png" />
   </ion-avatar>
 </ion-toolbar>
 
@@ -25,15 +23,64 @@
 
   <div class="containerScroll">
     <div class="scroll" scrollLeft="true">
-      <ion-chip color="primary" *ngFor="let sintoma of sintomas">
-        <ion-label>{{sintoma}}</ion-label>
+      <ion-chip
+        id="{{sintoma.id}}"
+        (click)="selectSintoma(sintoma)"
+        outline
+        color="medium"
+        *ngFor="let sintoma of sintomas"
+      >
+        <ion-label>{{sintoma.name}}</ion-label>
       </ion-chip>
     </div>
   </div>
 
+  <div id="selectedSintomas" class="expand">
+    <ion-chip
+      id="{{sintoma.id}}"
+      outline
+      color="secondary"
+      *ngFor="let sintoma of selectedSintomas"
+      (click)="deleteSintoma(sintoma)"
+    >
+      <ion-label>{{sintoma.name}}</ion-label>
+      <ion-icon name="close"></ion-icon>
+    </ion-chip>
+  </div>
+
+  <ion-button></ion-button>
+
   <div class="container">
     <div class="poster">
       <p class="text item5">Cuide da sua saúde mental durante a pandemia</p>
+      <p class="text item3">Participe do nosso evento online com psicológos</p>
+
+      <div class="buttonContainer">
+        <ion-button class="button" size="small">Participe</ion-button>
+      </div>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8">
+          <p class="text item7">Próximas consultas</p>
+        </ion-col>
+        <ion-col size="4">
+          <a href="#">
+            <p class="text item6">Ver mais</p>
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="containerScroll">
+      <div class="scroll" scrollX="true">
+        <div class="flex">
+          <app-consultation-card
+            *ngFor="let c of consultations"
+            [consultationItem]="c"
+          ></app-consultation-card>
+        </div>
+      </div>
     </div>
   </div>
 </ion-content>
